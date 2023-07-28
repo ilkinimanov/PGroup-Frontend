@@ -1,0 +1,10 @@
+deployment:
+  task:
+    - export DEPLOYPATH=/home/pgroup/public_html
+    - /bin/cp admin.html $DEPLOYPATH
+    - /bin/cp create-partner.html $DEPLOYPATH
+    - /bin/cp create-work.html $DEPLOYPATH
+    - /bin/cp get-all-partners.html $DEPLOYPATH
+    - /bin/cp get-all-works.html $DEPLOYPATH
+    - /bin/cp index.html $DEPLOYPATH
+    - /bin/cp -r public $DEPLOYPATH
