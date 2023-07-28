@@ -1,5 +1,5 @@
 deployment:
-  task:
+  tasks:
     - export DEPLOYPATH=/home6/pgroup/public_html
     - /bin/cp admin.html $DEPLOYPATH
     - /bin/cp create-partner.html $DEPLOYPATH
