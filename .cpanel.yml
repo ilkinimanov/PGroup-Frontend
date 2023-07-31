@@ -9,3 +9,5 @@ deployment:
     - /bin/cp index.php $DEPLOYPATH
     - /bin/cp send_email.php $DEPLOYPATH
     - /bin/cp -r public $DEPLOYPATH
+    - /bin/cp composer.json $DEPLOYPATH
+    - /bin/cp composer.lock $DEPLOYPATH
