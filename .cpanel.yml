@@ -6,5 +6,6 @@ deployment:
     - /bin/cp create-work.html $DEPLOYPATH
     - /bin/cp get-all-partners.html $DEPLOYPATH
     - /bin/cp get-all-works.html $DEPLOYPATH
-    - /bin/cp index.html $DEPLOYPATH
+    - /bin/cp index.php $DEPLOYPATH
+    - /bin/cp send_email.php
     - /bin/cp -r public $DEPLOYPATH

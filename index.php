@@ -328,17 +328,17 @@
           <h2>Do you have any questions?</h2>
           <h2 class="second_heading">Contact us</h2>
         </div>
-        <form role="form" class="form-inline text-right col-md-6" method="POST">
+        <form role="form" class="form-inline text-right col-md-6" method="POST" action="send_email.php">
           <div class="form-group">
-            <input type="text" class="form-control" id="name" placeholder="Name" name="name">
+            <input type="text" class="form-control" id="name" placeholder="Name" name="name" required>
           </div>
           <div class="form-group">
-            <input type="email" class="form-control" id="email" placeholder="Email" name="email">
+            <input type="email" class="form-control" id="email" placeholder="Email" name="email" required>
           </div>
           <div class="form-group">
-            <textarea class="form-control" rows="5" id="msg" placeholder="Message" name="message"></textarea>
+            <textarea class="form-control" rows="5" id="msg" placeholder="Message" name="message" required></textarea>
           </div>
-          <button type="submit" class="btn submit_btn">Submit</button>
+          <button type="submit" class="btn submit_btn" name="send">Submit</button>
         </form>
       </div>
     </div>
@@ -367,7 +367,7 @@
             <h4>Contact us</h4>
             <ul class="list-unstyled footer_contact">
               <li><a href=""><span class="fa fa-map-marker"></span> Baku, Azerbaijan</a></li>
-              <li><a href=""><span class="fa fa-envelope"></span> example@example.cm</a></li>
+              <li><a href=""><span class="fa fa-envelope"></span> office@pgroup.com</a></li>
               <li><a href="tel:+994555555555"><span class="fa fa-mobile"></span> +994 55 555 55 55</a></li>
             </ul>
           </div>
