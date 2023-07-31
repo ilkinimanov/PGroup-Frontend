@@ -11,14 +11,14 @@ use PHPMailer\PHPMailer\Exception;
 if (isset($_POST["send"])) {
   $mail = new PHPMailer(true);
 
+  // Change these lines according to your SMTP server settings
   $mail->isSMTP();
-  $mail->Host = $_ENV['SMTP_HOST'];
-  $mail->SMTPAuth = true;
-  $mail->Username = $_ENV['SMTP_USERNAME'];
-
-
-  $mail->SMTPSecure = 'ssl';
-  $mail->Port = $_ENV['SMTP_PORT'];
+  $mail->Host = 'localhost'; // The hostname of the SMTP server
+  $mail->SMTPAuth = true; // Enable SMTP authentication
+  // $mail->Username = 'user@example.com'; // The username to use for SMTP authentication
+  // $mail->Password = 'secret'; // The password to use for SMTP authentication
+  $mail->SMTPSecure = 'tls'; // Enable TLS encryption; `PHPMailer::ENCRYPTION_SMTPS` encouraged
+  $mail->Port = 25; // TCP port to connect to, use 465 for `PHPMailer::ENCRYPTION_SMTPS` above
 
   $mail->setFrom('office@pgroup.az');
 
