@@ -13,14 +13,14 @@ if (isset($_POST["send"])) {
 
   // Change these lines according to your SMTP server settings
   $mail->isSMTP();
-  $mail->Host = 'localhost'; // The hostname of the SMTP server
-  $mail->SMTPAuth = true; // Enable SMTP authentication
-  // $mail->Username = 'user@example.com'; // The username to use for SMTP authentication
-  // $mail->Password = 'secret'; // The password to use for SMTP authentication
-  $mail->SMTPSecure = 'tls'; // Enable TLS encryption; `PHPMailer::ENCRYPTION_SMTPS` encouraged
-  $mail->Port = 25; // TCP port to connect to, use 465 for `PHPMailer::ENCRYPTION_SMTPS` above
+  $mail->Host = $_ENV['SMTP_HOST'];
+  $mail->SMTPAuth = true;
+  $mail->Username = $_ENV['SMTP_USERNAME'];
+  $mail->Password = $_ENV['SMTP_PASSWORD'];
+  $mail->SMTPSecure = 'tls';
+  $mail->Port = $_ENV['SMTP_PORT'];
 
-  $mail->setFrom('office@pgroup.az');
+  $mail->setFrom('support@pgroup.az');
 
   $mail->addAddress($_POST["email"]);
   $mail->isHTML(true);
