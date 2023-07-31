@@ -7,5 +7,5 @@ deployment:
     - /bin/cp get-all-partners.html $DEPLOYPATH
     - /bin/cp get-all-works.html $DEPLOYPATH
     - /bin/cp index.php $DEPLOYPATH
-    - /bin/cp send_email.php
+    - /bin/cp send_email.php $DEPLOYPATH
     - /bin/cp -r public $DEPLOYPATH
